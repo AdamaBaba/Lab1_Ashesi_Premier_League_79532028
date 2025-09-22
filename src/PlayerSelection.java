@@ -45,6 +45,16 @@ public class PlayerSelection {
         if (age < 18 || final_weight > 90) {
             eligibility = "Player has a problem (either too young or too heavy)";
         }
+
+        // Checking if attacker
+        String attacker = "";
+        if (jersey == 7 || jersey == 9 || jersey == 10 || jersey == 11){
+           attacker = "Yes";
+        }
+        else{
+            attacker = "No";
+        }
+
         // Checking the category of player
         String category = "";
         if (age < 20) {
@@ -106,6 +116,7 @@ public class PlayerSelection {
         System.out.println("Jersey: " + jersey);
         System.out.println("Description: " + category);
         System.out.println("Position: " + position);
+        System.out.println("Attacker: " + attacker);
         System.out.println("Eligibility: " + eligibility);
         System.out.println("Lineup Decision: " + decision);
         System.out.println("Final Decision: " + status);
